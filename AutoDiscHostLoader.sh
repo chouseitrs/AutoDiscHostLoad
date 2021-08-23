@@ -78,6 +78,7 @@ while [[ $i -lt $ADiscoveries ]]; do
   let i=$i+1
   sleep 1
 done
+rm -f 'AutoDiscoveryResults.json'
 svstring="user|export_type"$'\n'"$op5user|user_export"
 svjson=$(jq -Rn '
         ( input  | split("|") ) as $keys |
