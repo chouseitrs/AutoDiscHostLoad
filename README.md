@@ -9,3 +9,5 @@ By default it will prompt for host names, the -n flag will use the address as th
 It will add a hostgroup if specified with the -g option. Hostgroup must already exist, there is a validation prior to executing changes.
 
 It will use a template if specified with the -t option. Template must already exist, there is a validation prior to executing changes.
+
+The directLoad version will require both master and poller host addresses. It will reach out to the poller and use the latest autodiscovery execution id and load those hosts (or you can specify an execution id with -x).
