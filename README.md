@@ -11,3 +11,5 @@ It will add a hostgroup if specified with the -g option. Hostgroup must already 
 It will use a template if specified with the -t option. Template must already exist, there is a validation prior to executing changes.
 
 The directLoad version will require both master and poller host addresses. It will reach out to the poller and use the latest autodiscovery execution id and load those hosts (or you can specify an execution id with -x).
+
+The shell script version (.sh) is less robust but will load hosts to the master after pulling the latest execution.
