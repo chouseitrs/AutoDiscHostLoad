@@ -26,11 +26,11 @@ if [ -z $templ ]; then
 fi
 
 echo "OP5 API User Password:"
-#stty_orig=$(stty -g) # save original terminal setting.
-#stty -echo           # turn-off echoing.
-#IFS= read -r passwd  # read the password
-#stty "$stty_orig"    # restore terminal setting.
-passwd="monitor"
+stty_orig=$(stty -g) # save original terminal setting.
+stty -echo           # turn-off echoing.
+IFS= read -r passwd  # read the password
+stty "$stty_orig"    # restore terminal setting.
+
 authstr=$(echo -n $op5user":"$passwd | base64)
 
 # Get the execution id of the latest job execution
