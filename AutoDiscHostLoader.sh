@@ -20,7 +20,7 @@ if [ -z $op5user ] || [ -z $master ] || [ -z $poller ]; then
 fi
 
 if [ -z $templ ]; then
-    $templ="default-host-template"
+    templ="default-host-template"
 fi
 
 echo "OP5 API User Password:"
