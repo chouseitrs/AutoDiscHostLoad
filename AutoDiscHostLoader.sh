@@ -2,8 +2,6 @@
 
 usage() { echo "Usage: $0" 1>&2; exit 1; }
 
-unset op5user
-
 while getopts ":u:m:p:t:g:" opt; do
   case $opt in
     u) op5user=$OPTARG;;
